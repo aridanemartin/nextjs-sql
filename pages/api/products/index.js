@@ -29,7 +29,6 @@ const saveProduct = async (req,res) =>{
 
 const getProducts = async (req, res) =>{
     const [result] = await pool.query('SELECT * FROM product')
-    console.log(result);
     return res.status(200).json(result);
 }
 
